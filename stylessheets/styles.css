@@ -39,6 +39,20 @@ body {
 
  }
 
+ /* Custom styles for the map page */
+.navbar {
+  background-color: #f8f9fa; /* Light gray background */
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.map-section {
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
  /* .button {
    transition-duration: 0.4s;
  } */
