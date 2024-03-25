@@ -1,0 +1,49 @@
+body {
+   background-color: lightblue;
+  }
+  
+  h1 {
+    color: navy;
+    margin-left: 20px;
+  }
+  
+  .container {
+   /* border-style: solid;
+   border-color: black; */
+   padding: 5%;
+ }
+
+ .container-storyPage {
+  /* background-image: url('/backgrounds/Paper1.jpg'); */
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: 100% 100%;
+  height: 200px;
+  width: auto;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  padding: 10%;
+ }
+
+ .container-map {
+  background-image: url('../backgrounds/map.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 459px;
+  width: 800px;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  padding: 10%;
+
+ }
+
+ /* .button {
+   transition-duration: 0.4s;
+ } */
+ 
+ /* .button:hover {
+   background-color: #04AA6D;
+   color: white;
+ } */
