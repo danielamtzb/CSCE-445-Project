@@ -1,0 +1,19 @@
+.container-map {
+    background-image: url('../backgrounds/map.gif');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 459px;
+    width: 800px;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    padding: 10%;
+  
+   } 
+
+.grid-container {
+    display: grid;
+    grid-template-columns:
+    repeat(9, 1fr);
+    gap: 40px;
+  } 
