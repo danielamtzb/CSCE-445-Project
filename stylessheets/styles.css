@@ -26,18 +26,6 @@ body {
   padding: 10%;
  }
 
- .container-map {
-  background-image: url('../backgrounds/map.gif');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  height: 459px;
-  width: 800px;
-  border-style: solid;
-  border-color: black;
-  border-width: 3px;
-  padding: 10%;
-
- }
 
  /* Custom styles for the map page */
 .navbar {
