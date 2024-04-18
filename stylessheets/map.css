@@ -1,3 +1,13 @@
+body{
+  background-color:#1a5185;
+}
+.pixel-font{
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 100px;
+  color: #95ccff;
+}
 .container-map {
     background-image: url('../backgrounds/map.gif');
     background-size: 100% 100%;
