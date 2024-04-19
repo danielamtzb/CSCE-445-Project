@@ -9,21 +9,91 @@ body{
   color: #95ccff;
 }
 .container-map {
-    background-image: url('../backgrounds/map.gif');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    height: 459px;
-    width: 800px;
-    border-style: solid;
-    border-color: black;
-    border-width: 3px;
-    padding: 10%;
-  
-   } 
+  background-image: url('../backgrounds/map.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 459px;
+  width: 800px;
+  border-style: solid;
+  border-color: #1a5185;
+  border-width: 10px;
+  padding: 8%;
+} 
 
 .grid-container {
-    display: grid;
-    grid-template-columns:
-    repeat(9, 1fr);
-    gap: 40px;
-  } 
+  display: grid;
+  grid-template-columns:
+  repeat(9, 1fr);
+  gap: 40px;
+} 
+
+/* 8-bit button */
+.goBackButton{
+  float: right;
+  margin-top: -8%;
+}
+
+.eightbit-btn {
+  background: #76c442;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  box-shadow: inset -4px -4px 0px 0px #4aa52e;
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 40px;
+}
+.eightbit-btn:hover, .eightbit-btn:focus {
+  background: #61a334;
+  box-shadow: inset -6px -6px 0px 0px #377923;
+  text-decoration: none;
+  color: darkgreen;
+}
+.eightbit-btn:active {
+  box-shadow: inset 4px 4px 0px 0px #4aa52e;
+}
+.eightbit-btn:before, .eightbit-btn:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+}
+.eightbit-btn:before {
+  top: -6px;
+  left: 0;
+  border-top: 6px black solid;
+  border-bottom: 6px black solid;
+}
+.eightbit-btn:after {
+  left: -6px;
+  top: 0;
+  border-left: 6px black solid;
+  border-right: 6px black solid;
+}
+.eightbit-btn--red {
+  background: #e76e55;
+  box-shadow: inset -4px -4px 0px 0px #8c2022;
+}
+.eightbit-btn--red:hover, .eightbit-btn--red:focus {
+  background: #ce372b;
+  box-shadow: inset -6px -6px 0px 0px #8c2022;
+}
+.eightbit-btn--red:active {
+  box-shadow: inset 4px 4px 0px 0px #8c2022;
+}
+.eightbit-btn--yellow {
+  background: #f7d51d;
+  box-shadow: inset -4px -4px 0px 0px #e59400;
+}
+.eightbit-btn--yellow:hover, .eightbit-btn--yellow:focus {
+  background: #f2c409;
+  box-shadow: inset -6px -6px 0px 0px #e59400;
+}
+.eightbit-btn--yellow:active {
+  box-shadow: inset 4px 4px 0px 0px #e59400;
+}
