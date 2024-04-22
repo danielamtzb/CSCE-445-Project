@@ -63,6 +63,9 @@ function removeSelectedItems() {
   });
 }
 
+function checkItem(itemName) {
+  return inventory.includes(itemName);
+}
 
 function saveInventory(){
   localStorage.setItem('inventory', JSON.stringify(inventory));
