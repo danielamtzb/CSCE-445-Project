@@ -7,7 +7,8 @@ html {
     font-style: normal;
     font-size: 40px;
 }
-.background-gif{
+
+.background-gif {
     z-index: -1;
     align-self: center;
     background-size: contain;
@@ -18,10 +19,11 @@ html {
     width: 100%;
 }
 
-.background{    
-    align-content: center;   
+.background {
+    align-content: center;
     width: 100%;
 }
-.container{
+
+.container {
     z-index: 1;
 }
