@@ -5,17 +5,27 @@ window.onload = function() {
   let savedInventory = localStorage.getItem('inventory');
   if(savedInventory) {
     inventory = JSON.parse(savedInventory);
-    updateInventory();
+    if (window.location.pathname.endsWith('inventory.html')) {
+      updateInventory();
+    }
   }
 };
 
 function collectItem(itemName) {
   // Simulating collecting an item
+  console.log("Attempting to collect item:", itemName); // Output a message indicating the item being removed
+  
   if(itemName.trim() !== ""){
     inventory.push(itemName);
-    updateInventory();
+    if (window.location.pathname.endsWith('inventory.html')) {
+      updateInventory();
+    }
     saveInventory();
+    console.log("Item added successfully.");
+  } else{
+    console.log("Item NOT added");
   }
+  
   
 }
 
@@ -36,7 +46,13 @@ function removeItem(itemName){
 }
 
 function updateInventory() {
+  // Check if this is the inventory.html page before updating inventory
+  if (!window.location.pathname.endsWith('inventory.html')) {
+    return; // Exit the function if not on inventory.html
+  }
+
   let inventoryList = document.getElementById("inventory-list");
+
   inventoryList.innerHTML = "";
   inventory.forEach(item => {
     let itemElement = document.createElement("div");
