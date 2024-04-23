@@ -86,3 +86,6 @@ function checkItem(itemName) {
 function saveInventory(){
   localStorage.setItem('inventory', JSON.stringify(inventory));
 }
+
+
+/* Story Page 1 Conditional statement */
