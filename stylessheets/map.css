@@ -12,8 +12,8 @@ body{
   background-image: url('../backgrounds/map.gif');
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  height: 459px;
-  width: 800px;
+  height: 550px;
+  width: 100%;
   border-style: solid;
   border-color: #1a5185;
   border-width: 10px;
@@ -22,10 +22,15 @@ body{
 
 .grid-container {
   display: grid;
-  grid-template-columns:
-  repeat(9, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(8, 50px);
+  gap: 50px;
+  margin-left: 80px;
+  margin-top: 10px;
 } 
+
+#pin{
+  width:20px;
+}
 
 /* 8-bit button */
 .goBackButton{
