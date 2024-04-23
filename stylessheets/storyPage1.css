@@ -1,0 +1,25 @@
+
+
+
+/* Inventory Button */
+  .inventory-link {
+    display: inline-block;
+    position: relative;
+  }
+
+  .inventory-link:hover img {
+    transform: translateX(5px);
+  }
+
+  .inventory-link:hover::after {
+    content: "Check Inventory";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }

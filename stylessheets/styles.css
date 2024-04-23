@@ -90,3 +90,15 @@ body {
   border-left: 6px black solid;
   border-right: 6px black solid;
 }
+
+
+/* Inventory Button */
+
+.inventory-link {
+  display: inline-block;
+  position: relative;
+}
+
+.inventory-link:hover img {
+  transform: translateX(-5px) translateY(-5px);
+}

@@ -1,0 +1,125 @@
+body {
+  background-color: #95ccff;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 10%;
+}
+
+.container {
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 100px;
+  color:#1a5185;
+}
+
+.container-storyPage {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 200px;
+  width: auto;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  padding: 10%;
+}
+
+.pixel{
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* start button */
+
+.eightbit-btn {
+  background: #97e365;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  box-shadow: inset -4px -4px 0px 0px #4aa52e;
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 40px;
+}
+
+.eightbit-btn:hover,
+.eightbit-btn:focus {
+  background: #8cd15d;
+  box-shadow: inset -6px -6px 0px 0px #377923;
+  text-decoration: none;
+  color: darkgreen;
+}
+
+.eightbit-btn:active {
+  box-shadow: inset 4px 4px 0px 0px #4aa52e;
+}
+
+.eightbit-btn:before,
+.eightbit-btn:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+}
+
+.eightbit-btn:before {
+  top: -6px;
+  left: 0;
+  border-top: 6px black solid;
+  border-bottom: 6px black solid;
+}
+
+.eightbit-btn:after {
+  left: -6px;
+  top: 0;
+  border-left: 6px black solid;
+  border-right: 6px black solid;
+}
+
+
+/* Inventory Button */
+
+.inventory-link {
+  display: inline-block;
+  position: relative;
+}
+
+.inventory-link:hover img {
+  transform: translateX(-5px) translateY(-5px);
+}
+
+.selected {
+  border: 2px solid red; /* Add a border to visually indicate selection */
+}
+
+#inventory-list {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+  
+#inventory-list div {
+  flex: 0 0 auto; /* Set flex basis to auto to allow items to grow or shrink */
+  margin-right: 10px; /* Add margin between items */
+}
+  
+#inventory-list img {
+  width: 100px; /* Set width of images */
+  height: 100px; /* Set height of images */
+  object-fit: cover; /* Ensure images maintain aspect ratio */
+}
+  

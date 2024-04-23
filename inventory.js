@@ -8,6 +8,7 @@ window.onload = function() {
     if (window.location.pathname.endsWith('inventory.html')) {
       updateInventory();
     }
+    checkShovel(); //check shovel status when page loads
   }
 };
 
@@ -22,6 +23,7 @@ function collectItem(itemName) {
     }
     saveInventory();
     console.log("Item added successfully.");
+    location.reload();
   } else{
     console.log("Item NOT added");
   }
@@ -57,25 +59,51 @@ function updateInventory() {
   inventory.forEach(item => {
     let itemElement = document.createElement("div");
 
-    let checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.value = item;
-    itemElement.appendChild(checkbox);
+    // let checkbox = document.createElement("input");
+    // checkbox.type = "checkbox";
+    // checkbox.value = item;
+    // itemElement.appendChild(checkbox);
 
-    let label = document.createElement("label");
-    label.textContent = item;
-    itemElement.appendChild(label);
+    //let label = document.createElement("label");
+    // label.textContent = item;
+    //itemElement.appendChild(label);
+
+    let image = document.createElement("img");
+    image.src = `img/${item.toLowerCase()}.png`; // Assuming your image names match item names
+    image.alt = item;
+    image.style.width = "100px"; // Set width to 100px
+    image.style.height = "100px"; // Set height to 100px
+    itemElement.appendChild(image);
 
     inventoryList.appendChild(itemElement);
   });
 }
 
+//Selecting an image in inventory
+document.addEventListener('DOMContentLoaded', function() {
+  updateInventory(); // Update inventory when DOM is loaded
+
+  // Add event listener to handle image clicks for selection
+  let inventoryList = document.getElementById("inventory-list");
+  inventoryList.addEventListener("click", function(event) {
+    if (event.target.tagName === "IMG") { // Check if the clicked element is an image
+      event.target.classList.toggle("selected"); // Toggle the "selected" class on the clicked image
+      console.log("item selected");
+    }
+  });
+});
 
 function removeSelectedItems() {
-  let checkboxes = document.querySelectorAll("#inventory-list input[type='checkbox']:checked");
-  checkboxes.forEach(checkbox => {
-    let itemName = checkbox.value;
-    removeItem(itemName);
+  // let checkboxes = document.querySelectorAll("#inventory-list input[type='checkbox']:checked");
+  // checkboxes.forEach(checkbox => {
+  //   let itemName = checkbox.value;
+  //   removeItem(itemName);
+  // });
+
+  let selectedItems = document.querySelectorAll("#inventory-list img.selected");
+  selectedItems.forEach(item => {
+    let itemName = item.alt; // Get the item name from the image's alt attribute
+    removeItem(itemName); // Call the removeItem function with the item name
   });
 }
 
@@ -86,3 +114,10 @@ function checkItem(itemName) {
 function saveInventory(){
   localStorage.setItem('inventory', JSON.stringify(inventory));
 }
+
+function checkShovel() {
+  if (inventory.includes("shovel")) {
+    document.getElementById("next-page-link").style.display = "inline-block";
+  }
+}
+/* Story Page 1 Conditional statement */
