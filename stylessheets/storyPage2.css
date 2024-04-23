@@ -1,0 +1,27 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 40px;
+}
+.background-gif{
+    z-index: -1;
+    align-self: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    object-fit: cover;
+    background-color: #fce7b0;
+    width: 100%;
+}
+
+.background{    
+    align-content: center;   
+    width: 100%;
+}
+.container{
+    z-index: 1;
+}
