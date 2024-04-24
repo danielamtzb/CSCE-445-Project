@@ -9,8 +9,8 @@ html {
 }
 body {
     background-color: #fce7b0;
-}
-.background-gif{
+  }
+  .background-gif{
     z-index: -1;
     align-self: center;
     background-size: contain;
@@ -19,11 +19,12 @@ body {
     object-fit: cover;
     background-color: #fce7b0;
     width: 100%;
-}
-
-.background{    
+  }
+  
+  .background{    
     align-content: center;   
     width: 100%;
+    padding-bottom: 10%;
 }
 .container{
     z-index: 1;
@@ -42,6 +43,16 @@ body {
     
     border: 4px solid black; 
     border-radius: 15px; 
+}
+
+.container-storyPage p, 
+.container-storyPage a {
+  opacity: 100%;
+}
+
+.container-links {
+  display:flex;
+  justify-content: space-between;
 }
 
 /* Inventory Button */
