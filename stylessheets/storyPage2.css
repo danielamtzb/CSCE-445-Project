@@ -5,7 +5,8 @@ html {
     font-family: "Pixelify Sans", sans-serif;
     font-weight: 200;
     font-style: normal;
-    font-size: 40px;
+    font-size: 20px;
+    overflow-y: hidden;
 }
 .background-gif{
     z-index: -1;
@@ -14,14 +15,28 @@ html {
     background-repeat: no-repeat;
     position: absolute;
     object-fit: cover;
-    background-color: #fce7b0;
-    width: 100%;
+    background-color: black;
+    width:100%;
 }
 
 .background{    
     align-content: center;   
-    width: 100%;
 }
 .container{
     z-index: 1;
+}
+
+/* characters */
+#seal {
+    width: 300px;
+    margin-left: 60%;
+    margin-top: 7%;
+    position: absolute;
+}
+
+#penguin {
+    width: 200px;
+    margin-left: 17%;
+    margin-top: 13%;
+    position: absolute;
 }
