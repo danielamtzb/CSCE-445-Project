@@ -12,6 +12,7 @@ window.onload = function() {
   }
 };
 
+
 function collectItem(itemName) {
   // Simulating collecting an item
   console.log("Attempting to collect item:", itemName); // Output a message indicating the item being removed
@@ -27,8 +28,6 @@ function collectItem(itemName) {
   } else{
     console.log("Item NOT added");
   }
-  
-  
 }
 
 function removeItem(itemName){
@@ -52,21 +51,11 @@ function updateInventory() {
   if (!window.location.pathname.endsWith('inventory.html')) {
     return; // Exit the function if not on inventory.html
   }
-
   let inventoryList = document.getElementById("inventory-list");
 
   inventoryList.innerHTML = "";
   inventory.forEach(item => {
     let itemElement = document.createElement("div");
-
-    // let checkbox = document.createElement("input");
-    // checkbox.type = "checkbox";
-    // checkbox.value = item;
-    // itemElement.appendChild(checkbox);
-
-    //let label = document.createElement("label");
-    // label.textContent = item;
-    //itemElement.appendChild(label);
 
     let image = document.createElement("img");
     image.src = `img/${item.toLowerCase()}.png`; // Assuming your image names match item names
@@ -94,11 +83,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function removeSelectedItems() {
-  // let checkboxes = document.querySelectorAll("#inventory-list input[type='checkbox']:checked");
-  // checkboxes.forEach(checkbox => {
-  //   let itemName = checkbox.value;
-  //   removeItem(itemName);
-  // });
 
   let selectedItems = document.querySelectorAll("#inventory-list img.selected");
   selectedItems.forEach(item => {
@@ -115,9 +99,9 @@ function saveInventory(){
   localStorage.setItem('inventory', JSON.stringify(inventory));
 }
 
+/* Story Page 1 Conditional statement */
 function checkShovel() {
   if (inventory.includes("shovel")) {
-    document.getElementById("next-page-link").style.display = "inline-block";
+    document.getElementById("next-page-shovel").style.display = "inline-block";
   }
 }
-/* Story Page 1 Conditional statement */
