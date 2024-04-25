@@ -20,15 +20,44 @@
     <img class="background-gif" alt="swamp" src="./backgrounds/swamp.gif">
     <div class="container">
       <div class="container-storyPage">
-        <p> Page 1!</p>
-        <button class="item-button" name="shovel" onclick="collectItem(this.name); location.reload();">shovel</button>
-        <button class="item-button" name="apple" onclick="collectItem(this.name); location.reload();">apple</button>
-        <button class="item-button" name="water" onclick="collectItem(this.name); location.reload();">water</button>
-        <button class="item-button" name="flower" onclick="collectItem(this.name); location.reload();">flower</button>
+        <div class="conversation-container">
+          <h1> Page 1: The Enchanted Swamp! </h1>
+          <p>As you tread carefully through the misty swamp, the frogdog appears, its frog-like eyes sparkling with curiosity.
+            <div class="speaker">Frogdog: </div>  
+            <div>"Ribbit-bark! Welcome, traveler, to the heart of the swamp. What brings you to our humble abode?"</div>  
+            <div class="speaker">  User: </div>  
+            <div>"I'm on a quest to explore this mystical land. Do you know of any hidden treasures or secrets?"</div>  
+            <div class="speaker">Frogdog: </div>  
+            <div>"Ribbit-bark! Treasures, you say? Many secrets lie within these waters. Keep your eyes peeled for shimmering objects and listen to the whispers of the wind."</div>  
+            <div class="speaker">User: </div>  
+            <div>"Thank you, wise frogdog. I'll be sure to heed your advice as I journey deeper into the swamp."</div>  
+            <p>As the conversation ends, you notice a glimmer near a gnarled tree root. A well-worn shovel, half-buried in mud, catches your attention.</div>  
+            <div class="speaker">User: </div>  
+            "Ah, a 
+            <button class="item-button" name="shovel" onclick="collectItem(this.name); location.reload();">shovel</button>
+            ! This will come in handy for uncovering hidden paths and buried treasures."
+            <p>You also spot a ripe apple hanging from a nearby branch, its sweet scent wafting through the air.</p>
+            <div class="speaker">User: </div>
+            "An 
+            <button class="item-button" name="apple" onclick="collectItem(this.name); location.reload();">apple</button>
+            ! A refreshing snack for my journey through these murky lands."
+            <p>Further along the swamp's edge, a discarded water bottle rests among reeds, its contents still clear and cool.</p>
+            <div class="speaker">User: </div>
+            "A 
+            <button class="item-button" name="water" onclick="collectItem(this.name); location.reload();">water bottle</button>
+            ! Essential for staying hydrated in this humid environment."
+            <p>As you continue exploring, a vibrant flower catches your eye, its petals shimmering with magical energy.</p>
+            <div class="speaker">User: </div>
+            "A 
+            <button class="item-button" name="flower" onclick="collectItem(this.name); location.reload();">flower</button>
+            ! Such beauty amidst the swamp's wilderness. I'll keep this as a reminder of nature's wonders."
+            <p>With newfound items in hand, you venture deeper into the enchanted swamp, eager to uncover its mysteries.</p>
+          </p>
         <a id="next-page-shovel" href="./storyPage2.html" style="display: none;">Continue the story!</a>
+        </div>
       </div>
       <br>
-      <div id="frog"><img src="characters&Pins/frogdog.GIF" id="frog"></div>
+      <div id="frog"><img src="characters&Pins/frogdog.GIF" alt="frog" id="frog"></div>
       <a class="img-link" href="./map.html">
         <img src="./img/map.png" alt="Map" width="100" height="100">
       </a>
