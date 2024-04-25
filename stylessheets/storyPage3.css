@@ -57,7 +57,7 @@ body {
     background-image: url('../backgrounds/paper3.jpg');
     background-color: #f9f9f9; 
     width: auto; 
-    height: auto; 
+    height: 500px; 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
@@ -65,7 +65,14 @@ body {
     opacity: 85%;
     
     border: 4px solid black; 
-    border-radius: 15px; 
+    border-radius: 15px;
+    overflow-y: scroll; 
+}
+.container-storyPage::-webkit-scrollbar {
+    width: 0; /* Hide the scrollbar on WebKit browsers */
+}
+.container-storyPage {
+    scrollbar-width: none; /* Hide the scrollbar on Firefox */
 }
 
 .container-storyPage p, 
