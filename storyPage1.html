@@ -16,24 +16,22 @@
 </head>
 
 <body>
-  <div class="background">
-    <img class="background-gif" alt="Beach" src="./backgrounds/beach.gif">
-    <div class="container">
-      <h1>a Fantasy HyperText Adventure</h1>
-      <div class="container-storyPage">
-        <p>Page 1!</p>
-        <button class="btn btn-success" name="shovel" onclick="collectItem(this.name)">shovel</button>
-        <button class="btn btn-success" name="bandage" onclick="collectItem(this.name)">bandage</button>
-        <a id="next-page-link" href="./storyPage2.html" style="display: none;">Continue the story!</a>
-      </div>
-      <div class="container-links">
-        <a href="./map.html">See the map here!</a>
-        <a class="inventory-link" href="inventory.html">
-          <img src="./img/backpack.png" alt="Inventory" width="250" height="250">
-        </a>
-        <img src="./characters&Pins/frogdog.GIF" width="250" height="250">
-      </div>
+
+  <div class="container">
+    <h1>a Fantasy HyperText Adventure</h1>
+    <div class="container-storyPage">
+      <p> Page 1!</p>
+      <button class="btn btn-success" name="shovel" onclick="collectItem(this.name)">shovel</button>
+      <button class="btn btn-success" name="bandage" onclick="collectItem(this.name)">bandage</button>
+      <a id="next-page-shovel" href="./storyPage2.html" style="display: none;">Continue the story!</a>
     </div>
+    <br>
+    <a class="img-link" href="./map.html">
+      <img src="./img/map.png" alt="Map" width="100" height="100">
+    </a>
+    <a class="img-link" href="inventory.html">
+      <img src="./img/backpack.png" alt="Inventory" width="100" height="100">
+    </a>
   </div>
         
 
