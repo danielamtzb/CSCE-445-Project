@@ -8,7 +8,23 @@ window.onload = function() {
     if (window.location.pathname.endsWith('inventory.html')) {
       updateInventory();
     }
-    checkShovel(); //check shovel status when page loads
+    //Check if items are in the inventory
+    // Check if the current page is page1.html before calling checkShovel
+    if (window.location.pathname.endsWith('storyPage1.html')) {
+      checkShovel();
+    }
+    if (window.location.pathname.endsWith('storyPage2.html')) {
+      checkCoconut();
+    }
+    if (window.location.pathname.endsWith('storyPage3.html')) {
+      checkFlashlight();
+    }
+    if (window.location.pathname.endsWith('storyPage4.html')) {
+      checkBandage();
+    }
+    if (window.location.pathname.endsWith('end.html')) {
+      checkFinale();
+    }
   }
 };
 
@@ -24,7 +40,6 @@ function collectItem(itemName) {
     }
     saveInventory();
     console.log("Item added successfully.");
-    location.reload();
   } else{
     console.log("Item NOT added");
   }
@@ -91,10 +106,6 @@ function removeSelectedItems() {
   });
 }
 
-function checkItem(itemName) {
-  return inventory.includes(itemName);
-}
-
 function saveInventory(){
   localStorage.setItem('inventory', JSON.stringify(inventory));
 }
@@ -103,5 +114,29 @@ function saveInventory(){
 function checkShovel() {
   if (inventory.includes("shovel")) {
     document.getElementById("next-page-shovel").style.display = "inline-block";
+  }
+}
+/* Story Page 2 Conditional statement */
+function checkCoconut() {
+  if (inventory.includes("coconut")) {
+    document.getElementById("next-page-coconut").style.display = "inline-block";
+  }
+}
+/* Story Page 3 Conditional statement */
+function checkFlashlight() {
+  if (inventory.includes("flashlight")) {
+    document.getElementById("next-page-flashlight").style.display = "inline-block";
+  }
+}
+/* Story Page 4 Conditional statement */
+function checkBandage() {
+  if (inventory.includes("bandage")) {
+    document.getElementById("next-page-bandage").style.display = "inline-block";
+  }
+}
+/* Story Finale Conditional statement */
+function checkFinale() {
+  if (inventory.includes("flower") && inventory.includes("shell") && inventory.includes("diamond") && inventory.includes("shield")) {
+    document.getElementById("characters-finale").style.display = "inline-block";
   }
 }
