@@ -53,4 +53,15 @@ body {
     display:flex;
     justify-content: space-between;
   }
+
+/* Inventory Button */
+
+.img-link {
+    display: inline-block;
+    position: relative;
+}
+  
+.img-link:hover img {
+    transform: translateX(-5px) translateY(-5px);
+}
   
