@@ -38,6 +38,21 @@ body {
     overflow-y: hidden;
 }
 
+/* characters */
+#bat{
+    width:100px;
+    margin-left: 24%;
+    margin-top: -1%;
+    position:absolute;
+}
+
+#axolotl{
+    width:90px;
+    margin-left: 79%;
+    margin-top: 8%;
+    position:absolute;  
+}
+
 .container-storyPage{
     background-image: url('../backgrounds/paper3.jpg');
     background-color: #f9f9f9; 
