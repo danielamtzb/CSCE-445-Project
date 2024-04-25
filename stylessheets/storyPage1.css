@@ -28,11 +28,11 @@ html {
 
 /* Inventory Button */
 
-.inventory-link {
+.img-link {
   display: inline-block;
   position: relative;
 }
 
-.inventory-link:hover img {
+.img-link:hover img {
   transform: translateX(-5px) translateY(-5px);
 }
