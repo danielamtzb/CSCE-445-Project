@@ -5,10 +5,11 @@ html {
     font-family: "Pixelify Sans", sans-serif;
     font-weight: 200;
     font-style: normal;
-    font-size: 20px;
-    overflow-y: hidden;
+    font-size: 40px;
 }
-
+body {
+    background-color: #fce7b0;
+}
 .background-gif{
     z-index: -1;
     align-self: center;
@@ -16,33 +17,19 @@ html {
     background-repeat: no-repeat;
     position: absolute;
     object-fit: cover;
-    background-color: black;
-    width:100%;
+    background-color: #fce7b0;
+    width: 100%;
 }
 
 .background{    
     align-content: center;   
+    width: 100%;
 }
-
 .container{
     z-index: 1;
 }
 
-/* characters */
-#seal {
-    width: 300px;
-    margin-left: 60%;
-    margin-top: 7%;
-    position: absolute;
-}
-
-#penguin {
-    width: 200px;
-    margin-left: 17%;
-    margin-top: 13%;
-    position: absolute;
-
- .container-storyPage{
+.container-storyPage{
     background-image: url('../backgrounds/paper3.jpg');
     background-color: #f9f9f9; 
     width: auto; 
@@ -66,25 +53,25 @@ html {
     display:flex;
     justify-content: space-between;
   }
-  
+
 /* Inventory Button */
 .img-link {
-  display: inline-block;
-  position: relative;
+    display: inline-block;
+    position: relative;
 }
-  
 .img-link:hover img {
-  transform: translateX(-5px) translateY(-5px);
+    transform: translateX(-5px) translateY(-5px);
 }
 
 /* Inventory Items */
 .item-button {
-  background: none; /* Remove background color */
-  border: none; /* Remove border */
-  text-decoration: none; /* Underline text */
-  cursor: pointer; /* Change cursor to pointer on hover */
+    background: none; /* Remove background color */
+    border: none; /* Remove border */
+    text-decoration: none; /* Underline text */
+    cursor: pointer; /* Change cursor to pointer on hover */
 }
 .item-button:hover,
 .item-button:visited {
-  text-decoration: underline; /* Add underline on hover and after click (visited) */
+    text-decoration: underline; /* Add underline on hover and after click (visited) */
 }
+  

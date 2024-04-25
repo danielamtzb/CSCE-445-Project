@@ -1,5 +1,13 @@
-body {
-  background-color: #95ccff;
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 40px;
+    background-color: #95ccff;
+    overflow-y: hidden;
 }
   
 .content {
@@ -9,7 +17,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
-  margin-top: 10%;
+  margin-top: 0%;
 }
 
 .container {
@@ -32,11 +40,28 @@ body {
   padding: 10%;
 }
 
+.background{    
+  align-content: center;   
+  width: 100%;
+}
+
+.background-end{
+  z-index: -1;
+  align-self: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  object-fit: cover;
+  background-color: #fce7b0;
+  width: 100%;
+}
+
 .pixel{
   font-family: "Pixelify Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+  font-size: 40px;
 }
 
 /* start button */

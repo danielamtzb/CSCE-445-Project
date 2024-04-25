@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html  lang="en">
 <head>
   <title>a Fantasy HyperText Adventure</title>
   <meta charset="UTF-8">
@@ -17,19 +17,26 @@
 
 <body>
   <div class="background">
-    <img class="background-gif" src="/backgrounds/cave.gif">
+    <img class="background-gif" alt="Cave" src="./backgrounds/cave.gif">
     <div class="container">
-      <h1>a Fantasy HyperText Adventure</h1>
       <div id="bat"><img src="characters&Pins/bat_right.gif" id="bat"></div>
+
       <div class="container-storyPage">
         <p>Page 3!</p>
-        <a href="./storyPage4.html">Continue the story!</a>
-
+        <button class="item-button" name="flashlight" onclick="collectItem(this.name); location.reload();">flashlight</button>
+        <button class="item-button" name="diamond" onclick="collectItem(this.name); location.reload();">diamond</button>
+        <button class="item-button" name="rock" onclick="collectItem(this.name); location.reload();">rock</button>
+        <a id="next-page-flashlight" href="./storyPage4.html" style="display: none;">Continue the story!</a>
       </div>
-      <br>
-      <a href="./map.html">See the map here!</a>
-      <br>
-      <a class="nav-link" href="inventory.html">Inventory</a>
+      <div class="container-links">
+        <a class="img-link" href="./map.html">
+          <img src="./img/map.png" alt="Map" width="100" height="100">
+        </a>
+        <a class="img-link" href="inventory.html">
+          <img src="./img/backpack.png" alt="Inventory" width="100" height="100">
+        </a>
+        <img src="./characters&Pins/bat_right.gif" alt="bat" width="250" height="250">
+      </div>
     </div>
     <div id="axolotl"><img src="characters&Pins/axolotl.GIF" id="axolotl"></div>
 

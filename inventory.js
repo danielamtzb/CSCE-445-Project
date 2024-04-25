@@ -8,9 +8,26 @@ window.onload = function() {
     if (window.location.pathname.endsWith('inventory.html')) {
       updateInventory();
     }
-    checkShovel(); //check shovel status when page loads
+    //Check if items are in the inventory
+    // Check if the current page is page1.html before calling checkShovel
+    if (window.location.pathname.endsWith('storyPage1.html')) {
+      checkShovel();
+    }
+    if (window.location.pathname.endsWith('storyPage2.html')) {
+      checkCoconut();
+    }
+    if (window.location.pathname.endsWith('storyPage3.html')) {
+      checkFlashlight();
+    }
+    if (window.location.pathname.endsWith('storyPage4.html')) {
+      checkBandage();
+    }
+    if (window.location.pathname.endsWith('end.html')) {
+      checkFinale();
+    }
   }
 };
+
 
 function collectItem(itemName) {
   // Simulating collecting an item
@@ -23,12 +40,9 @@ function collectItem(itemName) {
     }
     saveInventory();
     console.log("Item added successfully.");
-    location.reload();
   } else{
     console.log("Item NOT added");
   }
-  
-  
 }
 
 function removeItem(itemName){
@@ -52,21 +66,11 @@ function updateInventory() {
   if (!window.location.pathname.endsWith('inventory.html')) {
     return; // Exit the function if not on inventory.html
   }
-
   let inventoryList = document.getElementById("inventory-list");
 
   inventoryList.innerHTML = "";
   inventory.forEach(item => {
     let itemElement = document.createElement("div");
-
-    // let checkbox = document.createElement("input");
-    // checkbox.type = "checkbox";
-    // checkbox.value = item;
-    // itemElement.appendChild(checkbox);
-
-    //let label = document.createElement("label");
-    // label.textContent = item;
-    //itemElement.appendChild(label);
 
     let image = document.createElement("img");
     image.src = `img/${item.toLowerCase()}.png`; // Assuming your image names match item names
@@ -94,11 +98,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function removeSelectedItems() {
-  // let checkboxes = document.querySelectorAll("#inventory-list input[type='checkbox']:checked");
-  // checkboxes.forEach(checkbox => {
-  //   let itemName = checkbox.value;
-  //   removeItem(itemName);
-  // });
 
   let selectedItems = document.querySelectorAll("#inventory-list img.selected");
   selectedItems.forEach(item => {
@@ -107,17 +106,37 @@ function removeSelectedItems() {
   });
 }
 
-function checkItem(itemName) {
-  return inventory.includes(itemName);
-}
-
 function saveInventory(){
   localStorage.setItem('inventory', JSON.stringify(inventory));
 }
 
+/* Story Page 1 Conditional statement */
 function checkShovel() {
   if (inventory.includes("shovel")) {
-    document.getElementById("next-page-link").style.display = "inline-block";
+    document.getElementById("next-page-shovel").style.display = "inline-block";
   }
 }
-/* Story Page 1 Conditional statement */
+/* Story Page 2 Conditional statement */
+function checkCoconut() {
+  if (inventory.includes("coconut")) {
+    document.getElementById("next-page-coconut").style.display = "inline-block";
+  }
+}
+/* Story Page 3 Conditional statement */
+function checkFlashlight() {
+  if (inventory.includes("flashlight")) {
+    document.getElementById("next-page-flashlight").style.display = "inline-block";
+  }
+}
+/* Story Page 4 Conditional statement */
+function checkBandage() {
+  if (inventory.includes("bandage")) {
+    document.getElementById("next-page-bandage").style.display = "inline-block";
+  }
+}
+/* Story Finale Conditional statement */
+function checkFinale() {
+  if (inventory.includes("flower") && inventory.includes("shell") && inventory.includes("diamond") && inventory.includes("shield")) {
+    document.getElementById("characters-finale").style.display = "inline-block";
+  }
+}

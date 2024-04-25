@@ -19,15 +19,23 @@
   <div class="background">
     <img class="background-gif" alt="Beach" src="./backgrounds/beach.gif">
     <div class="container">
-      <h1>a Fantasy HyperText Adventure</h1>
-      <div>
+      <div class="container-storyPage">
         <p>Page 2!</p>
-        <a href="./storyPage3.html">Continue the story!</a>
+        <button class="item-button" name="shell" onclick="collectItem(this.name); location.reload();">Sea Shell</button>
+        <button class="item-button" name="coconut" onclick="collectItem(this.name); location.reload();">coconut</button>
+        <button class="item-button" name="ball" onclick="collectItem(this.name); location.reload();">Beach ball</button>
+
+        <a id="next-page-coconut" href="./storyPage3.html" style="display: none;">Continue the story!</a>
       </div>
-      <br>
-      <a href="./map.html">See the map here!</a>
-      <br>
-      <a class="nav-link" href="inventory.html">Inventory</a>
+      <div class="container-links">
+        <a class="img-link" href="./map.html">
+          <img src="./img/map.png" alt="Map" width="100" height="100">
+        </a>
+        <a class="img-link" href="inventory.html">
+          <img src="./img/backpack.png" alt="Inventory" width="100" height="100">
+        </a>
+        <img src="./characters&Pins/seal.GIF" alt="seal" width="250" height="250">
+      </div>
     </div>
     <div id="seal"><img src="characters&Pins/seal.GIF" id="seal"></div>
     <div id="penguin"><img src="characters&Pins/dino-penguin.GIF" id="penguin"></div>

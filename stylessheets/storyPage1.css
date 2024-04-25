@@ -1,25 +1,84 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 20px;
+  overflow-y: hidden;
+}
 
+.background-gif {
+  z-index: -1;
+  align-self: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  object-fit: cover;
+  background-color: black;
+  width: 100%;
+}
 
+.background {
+  align-content: center;
+}
+
+.container {
+  z-index: 1;
+}
+/* page background */
+.container-storyPage {
+  background-image: url('../backgrounds/paper3.jpg');
+  background-color: #f9f9f9;
+  width: auto;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10%;
+  opacity: 85%;
+
+  border: 4px solid black;
+  border-radius: 15px;
+}
+
+.container-storyPage p,
+.container-storyPage a {
+  opacity: 100%;
+}
+
+.container-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* characters */
+#frog {
+  width: 300px;
+  margin-left: 46%;
+  margin-top: 3%;
+  position: absolute;
+}
 
 /* Inventory Button */
-  .inventory-link {
-    display: inline-block;
-    position: relative;
-  }
+.img-link {
+  display: inline-block;
+  position: relative;
+}
 
-  .inventory-link:hover img {
-    transform: translateX(5px);
-  }
+.img-link:hover img {
+  transform: translateX(-5px) translateY(-5px);
+}
 
-  .inventory-link:hover::after {
-    content: "Check Inventory";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #fff;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
+/* Inventory Items */
+.item-button {
+  background: none; 
+  border: none; 
+  text-decoration: none; 
+  cursor: pointer; 
+}
+.item-button:hover,
+.item-button:visited {
+  text-decoration: underline; 
+}
