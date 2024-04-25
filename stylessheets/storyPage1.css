@@ -56,7 +56,6 @@ body {
 }
 
 /* Inventory Button */
-
 .img-link {
   display: inline-block;
   position: relative;
@@ -64,4 +63,16 @@ body {
 
 .img-link:hover img {
   transform: translateX(-5px) translateY(-5px);
+}
+
+/* Inventory Items */
+.item-button {
+  background: none; /* Remove background color */
+  border: none; /* Remove border */
+  text-decoration: none; /* Underline text */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+.item-button:hover,
+.item-button:visited {
+  text-decoration: underline; /* Add underline on hover and after click (visited) */
 }

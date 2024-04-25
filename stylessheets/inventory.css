@@ -39,7 +39,11 @@ body {
   font-style: normal;
 }
 
-/* start button */
+/* 8-bit button */
+.goBackButton{
+  float: right;
+  margin-top: -8%;
+}
 
 .eightbit-btn {
   background: #97e365;
@@ -54,6 +58,8 @@ body {
   font-weight: 200;
   font-style: normal;
   font-size: 40px;
+  margin-left: 20px;
+  margin-top: 30px;
 }
 
 .eightbit-btn:hover,
