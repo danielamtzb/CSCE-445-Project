@@ -22,10 +22,11 @@
       <h1>a Fantasy HyperText Adventure</h1>
       <div class="container-storyPage">
         <p>Page 2!</p>
-        <button class="item-button" name="shell" onclick="collectItem(this.name)">Sea Shell</button>
-        <button class="item-button" name="coconut" onclick="collectItem(this.name)">coconut</button>
-        <button class="item-button" name="ball" onclick="collectItem(this.name)">Beach ball</button>
-        <a href="./storyPage3.html">Continue the story!</a>
+        <button class="item-button" name="shell" onclick="collectItem(this.name); location.reload();">Sea Shell</button>
+        <button class="item-button" name="coconut" onclick="collectItem(this.name); location.reload();">coconut</button>
+        <button class="item-button" name="ball" onclick="collectItem(this.name); location.reload();">Beach ball</button>
+
+        <a id="next-page-coconut" href="./storyPage3.html" style="display: none;">Continue the story!</a>
       </div>
       <div class="container-links">
         <a class="img-link" href="./map.html">
