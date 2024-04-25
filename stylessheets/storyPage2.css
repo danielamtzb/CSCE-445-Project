@@ -31,18 +31,19 @@ html {
 /* characters */
 #seal {
     width: 300px;
-    margin-left: 60%;
-    margin-top: 7%;
+    margin-left: 65%;
+    margin-top: 9%;
     position: absolute;
 }
 
 #penguin {
     width: 200px;
-    margin-left: 17%;
-    margin-top: 13%;
+    margin-left: 13%;
+    margin-top: 15%;
     position: absolute;
+}
 
- .container-storyPage{
+.container-storyPage{
     background-image: url('../backgrounds/paper3.jpg');
     background-color: #f9f9f9; 
     width: auto; 
@@ -55,6 +56,7 @@ html {
     
     border: 4px solid black; 
     border-radius: 15px; 
+    margin-top:5%;
 }
 
 .container-storyPage p, 
@@ -68,23 +70,24 @@ html {
   }
   
 /* Inventory Button */
-.img-link {
-  display: inline-block;
-  position: relative;
+.mapBag {
+    margin-top: -340px;
+    margin-left: -300px;
+
 }
   
 .img-link:hover img {
-  transform: translateX(-5px) translateY(-5px);
+  transform: translateX(0px) translateY(-5px);
 }
 
 /* Inventory Items */
 .item-button {
-  background: none; /* Remove background color */
-  border: none; /* Remove border */
-  text-decoration: none; /* Underline text */
-  cursor: pointer; /* Change cursor to pointer on hover */
+  background: none;
+  border: none;
+  text-decoration: none; 
+  cursor: pointer;
 }
 .item-button:hover,
 .item-button:visited {
-  text-decoration: underline; /* Add underline on hover and after click (visited) */
+  text-decoration: underline; 
 }
