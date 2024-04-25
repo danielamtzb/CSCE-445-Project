@@ -81,4 +81,15 @@ body {
 .item-button:visited {
     text-decoration: underline; /* Add underline on hover and after click (visited) */
 }
+
+.conversation-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+  
+  .speaker {
+    font-weight: bold;
+}
   
