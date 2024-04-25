@@ -6,10 +6,9 @@ html {
     font-weight: 200;
     font-style: normal;
     font-size: 40px;
-}
-body {
     background-color: #fce7b0;
 }
+
 .background-gif{
     z-index: -1;
     align-self: center;
@@ -25,6 +24,7 @@ body {
     align-content: center;   
     width: 100%;
 }
+
 .container{
     z-index: 1;
 }
